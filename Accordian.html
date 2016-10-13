@@ -1,0 +1,118 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>Learning JQuery</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+   
+   
+   <!--instead of saving the jquery downloaded to a file and
+   calling it from its saved location. You can simply put the url to it in the source like
+   this: src="http://code.jquery.com/jquery-latest.min.js" this version will always get
+   the latest version automatically and it may be faster.-->
+    
+    <!--for local versions you do not need to be online and that is
+    fine for our purposes right now-->
+    
+    <script type="text/javascript" src="jquery.min.js"></script>
+    
+    <!--This allows the use of css for the jquery UI
+    found in the same place as the ui src below-->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    
+    <!--This will allow me to use the Jquery UIs
+    for the source I'm simply using the url online through the
+    google api @: https://developers.google.com/speed/libraries/#jquery-ui-->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>    
+    
+    <style>
+        
+        #draggable{
+           height:200px;
+           width: 200px;
+           background-color: rgb(50,180,50);
+        }
+        #target{
+           height:300px;
+           width: 300px;
+           background-color: yellow;
+           
+        }
+    </style>
+    
+</head>
+
+
+<body>
+    
+    <!--for the Accordian function just surround content
+    with a <div> -->
+   <div id="accordion">
+   
+    <h3>Title</h3>
+    <div>
+        <p>This is some text. This is some text.This is some text.This is some text.
+        This is some text.This is some text.This is some text.This is some text.
+        This is some text.This is some text.This is some text.
+        This is some text.This is some text.</p> 
+    </div>
+    
+    
+    <h3>Title</h3>
+    <div>
+        <p>This is some text. This is some text.This is some text.This is some text.
+        This is some text.This is some text.This is some text.This is some text.
+        This is some text.This is some text.This is some text.
+        This is some text.This is some text.This is some text.This is some text.
+        This is some text.This is some text.This is some text.This is some text.
+        This is some text.This is some text.This is some text.This is some text.
+        This is some text.This is some text.</p> 
+    </div>
+    
+    <h3>Title</h3>
+    <div>
+        <p>This is some text. This is some text.This is some text.This is some text.
+        This is some text.This is some text.This is some text.This is some text.
+        This is some text.This is some text.This is some text.
+        This is some text.This is some text.This is some text.This is some text.
+        This is some text.This is some text.This is some text.This is some text.
+        This is some text.This is some text.This is some text.This is some text.
+        This is some text.This is some text.</p> 
+    </div>
+    
+    <h3>Title</h3>
+    <div>
+        <p>This is some text. This is some text.This is some text.This is some text.
+        This is some text.This is some text.This is some text.This is some text.
+        This is some text.This is some text.This is some text.
+        This is some text.This is some text.This is some text.This is some text.
+        This is some text.This is some text.This is some text.This is some text.
+        This is some text.This is some text.This is some text.This is some text.
+        This is some text.This is some text.</p> 
+    </div>
+    
+    <h3>Title</h3>
+    <div>
+        <p>This is some text. This is some text.This is some text.This is some text.
+        This is some text.This is some text.This is some text.This is some text.
+        This is some text.This is some text.This is some text.
+        This is some text.This is some text.This is some text.This is some text.
+        This is some text.This is some text.This is some text.This is some text.
+        This is some text.This is some text.This is some text.This is some text.
+        This is some text.This is some text.</p> 
+    </div>
+   </div>
+    
+    <script>
+        
+        $("#accordion").accordion();
+     
+    </script>
+    
+    
+</body>
+
+</html>

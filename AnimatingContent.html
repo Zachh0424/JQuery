@@ -1,0 +1,96 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>Learning JQuery</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+   
+   
+   <!--instead of saving the jquery downloaded to a file and
+   calling it from its saved location. You can simply put the url to it in the source like
+   this: src="http://code.jquery.com/jquery-latest.min.js" this version will always get
+   the latest version automatically and it may be faster.-->
+    
+    <!--for local versions you do not need to be online and that is
+    fine for our purposes right now-->
+    
+    <script type="text/javascript" src="jquery.min.js"></script>
+   
+    <style type="text/css">
+    #circle{
+            float: left;
+            width:200px;
+            height:200px;
+            background-color: rgb(75,200,75);
+            border-radius:100px;
+        }
+        #crappie{
+            width:100px;
+            height:18px;
+            border-radius: 25%;
+            background-color: rgb(40,150,40);
+            font-weight: bold;
+            color: rgb(75,200,150);
+        }
+        #fadeIn{
+            width:100px;
+            height:18px;
+            border-radius: 25%;
+            background-color: rgb(40,150,200);
+            font-weight: bold;
+            color: rgb(75,200,150);
+            
+        }
+        
+    </style>
+    
+    
+</head>    
+<body>
+    
+    <div id="circle"></div>
+    
+    
+    <script>
+    
+        $("#fadeIn").click(function() {
+           
+           $("p").fadeIn();
+            
+        });
+    
+        $("#circle").click(function() {
+        
+         /*This is the animate function in JQuery
+          *the access/use of attributes being animated
+          *is in curly brackets, and the time in millisec is next.
+          */
+         
+          //$(this).animate({width:"300px"}, 1500);
+        
+        /*now we will animate more attr seperating them by
+         *a comma the in curly brackets. (Notice: this is not
+         *using the css names but the javascript names ex: borderRadius)
+         */
+        
+        $(this).animate({
+            width:"300px",
+            height:"300px",
+            borderRadius:"150px",
+            marginLeft:"100px",
+            marginTop:"100px"
+            
+            }, 800);
+        
+        });
+    
+
+    
+    </script>
+    
+</body>
+
+</html>

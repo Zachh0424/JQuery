@@ -1,0 +1,85 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>Learning JQuery</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+   
+   
+   <!--instead of saving the jquery downloaded to a file and
+   calling it from its saved location. You can simply put the url to it in the source like
+   this: src="http://code.jquery.com/jquery-latest.min.js" this version will always get
+   the latest version automatically and it may be faster.-->
+    
+    <!--for local versions you do not need to be online and that is
+    fine for our purposes right now-->
+    
+    <script type="text/javascript" src="jquery.min.js"></script>
+   
+    <style type="text/css">
+    #circle{
+            float: left;
+            width:200px;
+            height:200px;
+            background-color: rgb(75,200,75);
+            border-radius:100px;
+        }
+    .square {
+        width:300px;
+        height:200px;
+        background-color:green;
+        border-radius:100px;
+    }
+    </style>
+    
+    
+</head>    
+<body>
+    
+    <script>
+    
+    //for regular expressions use slashes around vars
+   var regex=/great/i;
+   //the i at the end above will make it do a case In-sensitive search
+   
+   /*here we can search for multiple uses of
+    *the letter "e" by attatching "g" to the end
+    *This makes it search globally
+    */
+   var regex2=/e/g; //so this search for every instance of e and displays it in an array
+   
+   var string="Regex is great!";
+   
+   /*using the Jquery "match" funct. to match it
+    *to regex var
+    */
+   var result = string.match(regex);
+  
+  /*This will return the result which
+   * is "great" because it's found the word
+   * "great" in the string from using the match function.
+   */
+    alert(result);   
+  
+  /*if you delete "great" from the string or
+   *change the case it will return null (it
+   *must be an exact match. Case and all)
+   */
+  
+  //this is for var regex2
+  alert(result2);
+  
+  
+    </script>
+    
+    
+    
+    
+</body>
+
+
+
+</html>

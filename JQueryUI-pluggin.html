@@ -1,0 +1,60 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>Learning JQuery</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+   
+   
+   <!--instead of saving the jquery downloaded to a file and
+   calling it from its saved location. You can simply put the url to it in the source like
+   this: src="http://code.jquery.com/jquery-latest.min.js" this version will always get
+   the latest version automatically and it may be faster.-->
+    
+    <!--for local versions you do not need to be online and that is
+    fine for our purposes right now-->
+    
+    <script type="text/javascript" src="jquery.min.js"></script>
+    
+    <!--This will allow me to use the Jquery UIs
+    for the source I'm simply using the url online through the
+    google api @: https://developers.google.com/speed/libraries/#jquery-ui-->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>    
+    
+    <style>
+        
+        #square{
+           height:200px;
+           width: 200px;
+           background-color: grey;
+        }
+        
+    </style>
+    
+</head>
+
+
+<body>
+   
+    <div id="square"></div>
+    
+    
+    
+    <script>
+        
+       //here we will use the JQuery UI 
+        $("#square").draggable();
+  
+    /*To learn how to access the function (Ex: something happen when
+     *you drag it to a certain place) just go to the Jquery-ui site
+     */
+  
+    </script>
+    
+    
+</body>
+
+</html>

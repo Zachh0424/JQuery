@@ -1,0 +1,137 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>Learning JQuery</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+   
+   
+   <!--instead of saving the jquery downloaded to a file and
+   calling it from its saved location. You can simply put the url to it in the source like
+   this: src="http://code.jquery.com/jquery-latest.min.js" this version will always get
+   the latest version automatically and it may be faster.-->
+    
+    <!--for local versions you do not need to be online and that is
+    fine for our purposes right now-->
+    
+    <script type="text/javascript" src="jquery.min.js"></script>
+   
+    <style type="text/css">
+        
+        .square{
+            float: left;
+           width:200px;
+           height:200px;
+           background-color: rgb(200,75,75);
+           margin: 20px; 
+           padding: 20px;
+        }
+        #circle{
+            float: left;
+            width:200px;
+            height:200px;
+            background-color: rgb(75,200,75);
+            border-radius:50%;
+            margin: 20px;
+            padding: 20px;
+        }
+        .clear{
+            clear: both;
+        }
+        
+    </style>
+    
+    
+</head>    
+<body>
+   <!-- 
+    <div class="square"></div>
+    <div class="square"></div>
+-->
+    <div id="circle"></div>
+    
+    <div class="clear"></div>
+    
+    <p>This is some text</p>
+    
+    <div class="clear"></div>
+    
+    <iframe src="http://www.cnn.com"></iframe>
+    
+
+    <script>
+      
+    //check to see if jquery is running
+    
+    /*this jquery var only exists if it is installed unless
+    *its declared like above
+    */
+      
+    /*  
+        if (typeof jQuery != "undefined"){ 
+            
+            alert('jQuery is installed!');
+        } else {
+            
+            alert('jQuery is NOT installed!');
+            
+        }
+    */
+    
+    
+    
+    /*this '$' is a "selector" for jquery and calling
+    *the circle id and use a click funct.
+    */
+    
+    $("#circle").click(function(){
+       
+        //alert("Circle Clicked!");
+        $("p").html("The text has been changed!");
+        
+        //below with no content in the .html bracket
+        //this displays the content already held
+        alert($("p").html());
+        
+    });
+    
+      //below is hover capability
+      $("#circle").hover(function(){
+       
+        $("p").html("Changed!");
+        
+        /*if you wanted to specify the src of an iframe,
+         * '.attr' stands for attribute and allows you
+         * to return any attribute of an element.
+         * below take the src and changes it's value and returns it
+         */
+        $("iframe").attr("src", "http://www.ecowebhosting.co.uk");
+        
+    });
+    
+    
+    
+    $(".square").click(function(){
+       
+        alert("Square Clicked!");
+        
+    });
+    
+    
+    //this is for any general div
+    /*
+    $("div").click(function(){
+       
+        alert("Shape Clicked!");
+        
+    });
+    */
+    
+    </script>
+    
+</body>
+
+</html>

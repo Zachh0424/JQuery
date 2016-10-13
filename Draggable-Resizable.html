@@ -1,0 +1,81 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>Learning JQuery</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+   
+   
+   <!--instead of saving the jquery downloaded to a file and
+   calling it from its saved location. You can simply put the url to it in the source like
+   this: src="http://code.jquery.com/jquery-latest.min.js" this version will always get
+   the latest version automatically and it may be faster.-->
+    
+    <!--for local versions you do not need to be online and that is
+    fine for our purposes right now-->
+    
+    <script type="text/javascript" src="jquery.min.js"></script>
+    
+    <!--This allows the use of css for the jquery UI
+    found in the same place as the ui src below-->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    
+    <!--This will allow me to use the Jquery UIs
+    for the source I'm simply using the url online through the
+    google api @: https://developers.google.com/speed/libraries/#jquery-ui-->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>    
+    
+    <style>
+        
+        #draggable{
+           height:200px;
+           width: 200px;
+           background-color: rgb(50,180,50);
+        }
+        center{
+            padding: 65px;
+        }
+        #resizable{
+           height:200px;
+           width: 200px;
+           background-color: rgb(180,50,50);
+        }
+    </style>
+    
+</head>
+
+
+<body>
+   
+    <div id="draggable">
+        <center>Drag me around</center>
+    </div>
+    
+    <div id="resizable">
+        <center>Resizable</center>
+    </div>
+    
+    <script>
+        
+       //here we will use the JQuery UI 
+        $("#draggable").draggable().resizable();
+  
+    /*To learn how to access the function (Ex: something happen when
+     *you drag it to a certain place) just go to the Jquery-ui site
+     */
+  
+  
+  //this is refferring to resizable
+  $("#resizable").resizable();
+  
+  
+  
+    </script>
+    
+    
+</body>
+
+</html>

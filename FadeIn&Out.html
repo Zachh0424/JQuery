@@ -1,0 +1,110 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>Learning JQuery</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+   
+   
+   <!--instead of saving the jquery downloaded to a file and
+   calling it from its saved location. You can simply put the url to it in the source like
+   this: src="http://code.jquery.com/jquery-latest.min.js" this version will always get
+   the latest version automatically and it may be faster.-->
+    
+    <!--for local versions you do not need to be online and that is
+    fine for our purposes right now-->
+    
+    <script type="text/javascript" src="jquery.min.js"></script>
+   
+    <style type="text/css">
+    
+        #crappie{
+            width:100px;
+            height:18px;
+            border-radius: 25%;
+            background-color: rgb(40,150,40);
+            font-weight: bold;
+            color: rgb(75,200,150);
+        }
+        #fadeIn{
+            width:100px;
+            height:18px;
+            border-radius: 25%;
+            background-color: rgb(40,150,200);
+            font-weight: bold;
+            color: rgb(75,200,150);
+            
+        }
+        p{
+            margin-top: 100px;
+        }
+    </style>
+    
+    
+</head>    
+<body>
+    
+    
+    <p>Angling for crappie is popular throughout
+    much of North America. Methods vary, but among the most popular
+    is called "Spider Rigging," a method characterized by a fisherman
+    in a boat with many long fishing rods pointing away
+    from the angler at various angles like spokes from a
+    wheel.[13] Anglers who employ the Spider Rigging method may
+    choose from among many popular baits. Some of the most popular
+    are plastic jigs with lead jig heads, crankbaits or
+    live minnows.[14] Many anglers also chum or dump live bait
+    into the water to attract the fish to bite their bait.
+        Crappies are also regularly targeted and caught during the
+    spawning period by fly fishermen, and can be taken from
+    frozen ponds and lakes in winter by ice fishing.</p>
+
+    <button id="crappie" >Crappie</button>
+    
+    <button id="fadeIn" > Talk Crappie</button>
+    
+    
+    <script>
+    
+        $("#fadeIn").click(function() {
+           
+           $("p").fadeIn();
+            
+        });
+    
+        $("#crappie").click(function() {
+        
+        /*the set number in the fadeOut brackets, is the chosen number
+         *in milliseconds in which the fadeOut will take to
+         *complete. (2000 milliseconds = 2 seconds)
+         */
+            //$("p").fadeOut(2000);
+        
+            //you can also use words for fadeOut.
+            //$("p").fadeOut("slow");
+        
+        
+        /****Now we will run a seperate function called
+         ****a CALL BACK FUCTION
+         ****which will run as soon as the
+         ****fadeOut is complete
+         ****/
+        
+         $("p").fadeOut("slow", function(){
+         
+         alert("FadeOut complete!");
+         
+            });
+        
+        });
+    
+
+    
+    </script>
+    
+</body>
+
+</html>

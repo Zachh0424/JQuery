@@ -1,0 +1,38 @@
+JQuery function pluggins and code
+
+
+//This is very cool and useful stuff!!
+
+
+
+	**For Jquery User interface Functionalities:
+		https://jqueryui.com/
+		
+		
+		
+	*For Pull to Refresh ability:
+		http://www.jqueryscript.net/layout/jQuery-Pull-to-Refresh-Plugin-for-Web-Page-Hook-js.html
+		
+		
+		
+		
+	**For JQuery cool design and functionalities:
+		http://iamceege.github.io/tooltipster/
+		
+		
+		
+		
+	*For images and nice pop-up operations:
+		http://dimsemenov.com/plugins/magnific-popup/
+		
+		
+		
+		
+	**For nice sliding and list operations and UI:
+		http://unslider.com/
+		
+		
+		
+		
+	**For typeahead functionality like chrome and text:
+		https://twitter.github.io/typeahead.js/examples/

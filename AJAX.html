@@ -1,0 +1,132 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>Learning JQuery</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+   
+   
+   <!--instead of saving the jquery downloaded to a file and
+   calling it from its saved location. You can simply put the url to it in the source like
+   this: src="http://code.jquery.com/jquery-latest.min.js" this version will always get
+   the latest version automatically and it may be faster.-->
+    
+    <!--for local versions you do not need to be online and that is
+    fine for our purposes right now-->
+    
+	
+   <!-- <script type="text/javascript" src="jquery.min.js"></script> -->
+   
+  <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script> -->
+   
+   
+    <style type="text/css">
+    #circle{
+            float: left;
+            width:200px;
+            height:200px;
+            background-color: rgb(75,200,75);
+            border-radius:100px;
+        }
+        #crappie{
+            width:100px;
+            height:18px;
+            border-radius: 25%;
+            background-color: rgb(40,150,40);
+            font-weight: bold;
+            color: rgb(75,200,150);
+        }
+        #fadeIn{
+            width:100px;
+            height:18px;
+            border-radius: 25%;
+            background-color: rgb(40,150,200);
+            font-weight: bold;
+            color: rgb(75,200,150);
+            
+        }
+        
+    </style>
+    
+    
+</head>    
+<body>
+    
+    <h2> This is to check</h2>
+    
+    <h1>Asyncronous Javascript And XML</h1>
+    <!--Asyncronous means that it happens in the background
+    which allows you to run other bits of javascript code
+    at the same time. Ajax doesn't work specifically with XML
+    so you can use it with other types of files as well.
+    It allows you to load other files from your webserver
+    whilest your browser is doing other things without the
+    page having to reload/refresh. Cool websites use ajax.
+    
+    A slight complication using AJAX & JQuery is that it doesn't work over the
+    file protocol. here is where we will make more use of our
+    free webserver using FireFTP.
+    
+    -->
+    
+    
+    <script>
+    
+    /*AJAX call using Jquery to get the content of test.html
+     *in order to do anything with that content we must
+     *use a call back function (just like with the fadeOut function earlier)
+    */
+    //function takes the value of the content in test.html and puts it in the var data
+  /*  $.get("test.html", function(data){
+        
+        alert(data);
+        
+    });
+    */
+  
+    /* below is better than the get function and can alert user of
+        internet connection status if function fails
+    */
+    $.ajax({
+        url:"test.html"  
+    }).done(function(data){
+        
+        //alert(data);
+        
+        //this will change the data header
+       // $("h1").html(data)
+        
+        //this will add something to the content of our h1 tag
+        $("h1").append(data);
+        
+        
+    });
+  
+    </script>
+    
+</body>
+
+</html>names but the javascript names ex: borderRadius)
+         */
+        
+        $(this).animate({
+            width:"300px",
+            height:"300px",
+            borderRadius:"150px",
+            marginLeft:"100px",
+            marginTop:"100px"
+            
+            }, 800);
+        
+        });
+    
+
+    
+    </script>
+    
+</body>
+
+</html>
